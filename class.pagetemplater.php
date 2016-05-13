@@ -121,7 +121,7 @@ class PageTemplater {
 		if ( is_page() ) {
 			global $post;
 
-			if ( ! isset( $this->templates[get_post_meta( $post->ID, '_wp_page_template', true )] ) ) {
+			if ( ! isset( $this->templates[ get_post_meta( $post->ID, '_wp_page_template', true ) ] ) ) {
 				return $template;
 			}
 
