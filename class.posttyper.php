@@ -23,7 +23,7 @@ class Taxonomier {
 
 		$this->taxonomies = array(
 			'video_type'         => array(
-				'post_type' => 'video',
+				'post_type' => 'videos',
 				'args'      => array(
 					'labels'            => array(
 						'name'                       => 'Жанры',
@@ -48,38 +48,13 @@ class Taxonomier {
 					'show_admin_column' => true,
 					'hierarchical'      => true,
 					'description'       => 'Жанры выкладываемых видосов.',
-				),
-			),
-			'book_genre'         => array(
-				'post_type' => 'book',
-				'args'      => array(
-					'labels'            => array(
-						'name'                       => 'Темы',
-						'singular_name'              => 'Тема',
-						'menu_name'                  => 'Темы',
-						'all_items'                  => 'Все темы',
-						'edit_item'                  => 'Редактировать тему',
-						'view_item'                  => 'Просмотреть тему',
-						'update_item'                => 'Обновить тему',
-						'add_new_item'               => 'Добавить новую тему',
-						'new_item_name'              => 'Название новой темы',
-						'parent_item'                => 'Родительская тема',
-						'parent_item_colon'          => 'Родительская тема:',
-						'search_items'               => 'Искать темы',
-						'popular_items'              => 'Популярные темы',
-						'separate_items_with_commas' => 'Разделите темы запятыми',
-						'add_or_remove_items'        => 'Добавить или удалить темы',
-						'choose_from_most_used'      => 'Выберите из самых используемых тем',
-						'not_found'                  => 'Темы не найдены',
+					'rewrite'           => array(
+						'slug' => 'videos',
 					),
-					'public'            => true,
-					'show_admin_column' => true,
-					'hierarchical'      => true,
-					'description'       => 'Темы, о которых написано в выложенных книгах.',
 				),
 			),
-			'book_writer'        => array(
-				'post_type' => 'book',
+			'book_publisher'        => array(
+				'post_type' => 'books',
 				'args'      => array(
 					'labels'            => array(
 						'name'                       => 'Издательства',
@@ -104,10 +79,13 @@ class Taxonomier {
 					'show_admin_column' => true,
 					'hierarchical'      => false,
 					'description'       => 'Издательства, которые печатают и издают выложенные книги.',
+					'rewrite'           => array(
+						'slug' => 'books',
+					),
 				),
 			),
 			'testimonial_source' => array(
-				'post_type' => 'testimonial',
+				'post_type' => 'testimonials',
 				'args'      => array(
 					'labels'            => array(
 						'name'                       => 'Источники',
@@ -175,7 +153,7 @@ class PostTyper {
 	private function __construct() {
 
 		$this->post_types = array(
-			'video'       => array(
+			'videos'       => array(
 				'label'       => 'Видео',
 				'labels'      => array(
 					'name'                  => 'Видео',
@@ -198,12 +176,11 @@ class PostTyper {
 				'description' => 'Видео, которые мы заливаем на YouTube.',
 				'public'      => true,
 				'has_archive' => true,
-				'rewrite'     => array( 'slug' => 'videos' ),
 				'menu_icon'   => 'dashicons-video-alt',
 				'supports'    => array( 'title', 'editor', 'author', 'comments', 'thumbnail' ),
 				'taxonomies'  => array( 'post_tag' ),
 			),
-			'weekly'      => array(
+			'weeklies'      => array(
 				'label'       => 'Еженедельники',
 				'labels'      => array(
 					'name'                  => 'Еженедельники',
@@ -226,12 +203,11 @@ class PostTyper {
 				'description' => 'Еженедельники, в которых находится только самое лучшее.',
 				'public'      => true,
 				'has_archive' => true,
-				'rewrite'     => array( 'slug' => 'weeklies' ),
 				'menu_icon'   => 'dashicons-calendar',
 				'supports'    => array( 'title', 'editor', 'author', 'comments', 'thumbnail' ),
 				'taxonomies'  => array( 'post_tag' ),
 			),
-			'book'        => array(
+			'books'        => array(
 				'label'       => 'Книги',
 				'labels'      => array(
 					'name'                  => 'Книги',
@@ -254,11 +230,11 @@ class PostTyper {
 				'description' => 'Книги, которым мы делимся на сайте uWebDesign. Только для ознакомления.',
 				'public'      => true,
 				'has_archive' => true,
-				'rewrite'     => array( 'slug' => 'books' ),
 				'menu_icon'   => 'dashicons-book',
 				'supports'    => array( 'title', 'editor', 'author', 'comments', 'thumbnail' ),
+				'taxonomies'  => array( 'post_tag' ),
 			),
-			'testimonial' => array(
+			'testimonials' => array(
 				'label'       => 'Отзывы',
 				'labels'      => array(
 					'name'                  => 'Отзывы',
@@ -281,7 +257,6 @@ class PostTyper {
 				'description' => 'Отзывы, которые нам оставляют наши подписчики.',
 				'public'      => true,
 				'has_archive' => false,
-				'rewrite'     => array( 'slug' => 'testimonials' ),
 				'menu_icon'   => 'dashicons-megaphone',
 				'supports'    => array( 'title', 'comments' ),
 			),
@@ -308,7 +283,6 @@ class PostTyper {
 				'description' => 'Баннеры, за размещение которых нам платят бабки.',
 				'public'      => true,
 				'has_archive' => false,
-				'rewrite'     => array( 'slug' => 'banners' ),
 				'menu_icon'   => 'dashicons-money',
 				'supports'    => array( 'title', 'thumbnail' ),
 			),
