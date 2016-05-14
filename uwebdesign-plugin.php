@@ -3,7 +3,7 @@
  * Plugin Name: uWebDesign Functional Plugin
  * Plugin URI: https://github.com/websanya/uwebdesign-plugin
  * Description: Плагин с функционалом для комьюнити сайта uWebDesign.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru
  * GitHub Plugin URI: https://github.com/websanya/uwebdesign-plugin
@@ -20,7 +20,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'class.posttyper.php' );
  * Remove the slug from published post permalinks. Only affect our custom post type, though.
  */
 add_filter( 'post_type_link', 'uwd_remove_cpt_slug', 10, 3 );
-function uwd_remove_cpt_slug( $post_link, $post, $leavename ) {
+function uwd_remove_cpt_slug( $post_link, $post ) {
 
 	if ( ! in_array( $post->post_type, array( 'videos', 'weeklies', 'books' ) ) || 'publish' != $post->post_status ) {
 		return $post_link;
