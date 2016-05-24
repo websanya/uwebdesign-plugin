@@ -54,7 +54,7 @@ class PageTemplater {
 		 * Add your templates to this array.
 		 */
 		$this->templates = array(
-			'page-books.php' => '"Books" page template',
+//			'page-books.php' => '"Books" page template',
 		);
 
 	}
