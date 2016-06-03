@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.4
+* Revert the stuff back.
+
 ### 1.1.3
 * Tried to fix an error w/ taxonomy pagination.
 
