@@ -48,9 +48,9 @@ class Taxonomier {
 					'show_admin_column' => true,
 					'hierarchical'      => true,
 					'description'       => 'Жанры выкладываемых видосов.',
-					'rewrite'           => array(
-						'slug' => 'videos',
-					),
+//					'rewrite'           => array(
+//						'slug' => 'videos',
+//					),
 				),
 			),
 			'book_publisher'        => array(
@@ -79,9 +79,9 @@ class Taxonomier {
 					'show_admin_column' => true,
 					'hierarchical'      => false,
 					'description'       => 'Издательства, которые печатают и издают выложенные книги.',
-					'rewrite'           => array(
-						'slug' => 'books',
-					),
+//					'rewrite'           => array(
+//						'slug' => 'books',
+//					),
 				),
 			),
 			'testimonial_source' => array(

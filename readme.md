@@ -12,6 +12,9 @@
 
 ## История изменений
 
+### 1.1.3
+* Tried to fix an error w/ taxonomy pagination.
+
 ### 1.1.2
 * Added readme.md.
 * Temporarily removed `PageTemplater` class.

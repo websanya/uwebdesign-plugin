@@ -3,7 +3,7 @@
  * Plugin Name: uWebDesign Functional Plugin
  * Plugin URI: https://github.com/websanya/uwebdesign-plugin
  * Description: Плагин с функционалом для комьюнити сайта uWebDesign.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: Alexander Goncharov
  * Author URI: https://websanya.ru
  * GitHub Plugin URI: https://github.com/websanya/uwebdesign-plugin
