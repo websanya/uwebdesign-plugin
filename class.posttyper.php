@@ -49,7 +49,7 @@ class Taxonomier {
 					'hierarchical'      => true,
 					'description'       => 'Жанры выкладываемых видосов.',
 					'rewrite'           => array(
-						'slug' => 'videos',
+						'slug' => 'video-type',
 					),
 				),
 			),
@@ -80,7 +80,7 @@ class Taxonomier {
 					'hierarchical'      => false,
 					'description'       => 'Издательства, которые печатают и издают выложенные книги.',
 					'rewrite'           => array(
-						'slug' => 'books',
+						'slug' => 'book-publisher',
 					),
 				),
 			),
@@ -110,6 +110,9 @@ class Taxonomier {
 					'show_admin_column' => true,
 					'hierarchical'      => true,
 					'description'       => 'Издательства, которые печатают и издают выложенные книги.',
+					'rewrite'           => array(
+						'slug' => 'testimonial-source',
+					),
 				),
 			),
 		);
